@@ -9,10 +9,11 @@ class BurgerPane extends Component {
         
         
         return(
+        
             <div >
-                <h3></h3>
-                <ul >
-                </ul>
+                <h1>Burger pane</h1>
+               <BurgerStack stack={this.props.bunIngredients} />
+               <ClearBurger clearBtn={this.props.clear}/>
             </div>
         )
     }

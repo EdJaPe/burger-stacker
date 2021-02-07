@@ -9,10 +9,7 @@ class ClearBurger extends Component {
         
         return(
             <div>
-                <h3></h3>
-                <ul >
-                    
-                </ul>
+                <button onClick={this.props.clearBtn} >Clear Stack</button>
             </div>
         )
     }

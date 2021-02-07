@@ -14,9 +14,11 @@ class BurgerStacker extends Component {
         //clear burger ingredients
         this.setState({burgerIngred:[]})
     }
-    addToppings = (event) => {
-        console.log(event.target)
-        this.setState({name: event.target.innerText})
+    addToppings = (topping) => {
+       console.log( topping)
+        let ingredCopy = this.state.burgerIngred
+        ingredCopy.push(topping)
+        this.setState({burgerIngred:ingredCopy.reverse() })
     }
     render(){
         return(
@@ -25,7 +27,7 @@ class BurgerStacker extends Component {
                     <IngredientList addTops={this.addToppings} ingredients={this.state.ingredientes}/>
                 </div>
                 <div>
-                    <BurgerPane  bun={this.state.burgerIngred} clear={this.clearBurger}/>
+                    <BurgerPane  bunIngredients={this.state.burgerIngred} clear={this.clearBurger}/>
                 </div>
 
             </div>

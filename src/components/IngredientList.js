@@ -10,7 +10,7 @@ class IngredientList extends Component {
         return(
             <div >
                 {this.props.ingredients[0].map((ingredient, index) =>(
-                    <Ingredient topping={ingredient} key={index}/>
+                    <Ingredient add={this.props.addTops} topping={ingredient} key={index}/>
                 ))}
                 
             </div>

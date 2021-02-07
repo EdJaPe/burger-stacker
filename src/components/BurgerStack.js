@@ -7,10 +7,9 @@ class BurgerStack extends Component {
        
         return(
             <div >
-                <h3></h3>
-                <ul >
-                  
-                </ul>
+                {this.props.stack.map((top, key) => (
+                    <h4 key={key}>{top.name}</h4>
+                ))}
             </div>
         )
     }
