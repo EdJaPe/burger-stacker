@@ -3,19 +3,21 @@ import BurgerStack from './BurgerStack'
 import ClearBurger from './ClearBurger'
 
 
-class BurgerPane extends Component {
-    render() {
 
+
+function BurgerPane (props) {
+
+    return(
+    
+        <div >
+            <h1>Burger pane</h1>
+           <BurgerStack stack={props.bunIngredients} />
+           <ClearBurger clearBtn={props.clear}/>
+        </div>
+    )
+
+
+}        
         
-        
-        return(
-        
-            <div >
-                <h1>Burger pane</h1>
-               <BurgerStack stack={this.props.bunIngredients} />
-               <ClearBurger clearBtn={this.props.clear}/>
-            </div>
-        )
-    }
-}
+    
 export default BurgerPane

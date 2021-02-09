@@ -1,20 +1,21 @@
 import React, {Component} from 'react'
 
 
-class Ingredient extends Component {
-    render() {
-        // console.log(this.props)
-        return (
-            <div> 
-                <p>
-                    Ingredient:{this.props.topping.name}
-                </p>
-                <button onClick={() => this.props.add(this.props.topping)} >Add to burger</button>
-                        
-            </div>
+function Ingredient (props) {
 
-        )
-    }
+
+    return (
+        <div> 
+            <span style={{backgroundColor:props.topping.color}} >
+                Ingredient:{props.topping.name}
+            </span>
+            
+                    
+        </div>
+    
+    )
+
 }
+    
 
 export default Ingredient

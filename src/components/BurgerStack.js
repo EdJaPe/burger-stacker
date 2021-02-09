@@ -1,17 +1,20 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Ingredient from './Ingredient'
 
-class BurgerStack extends Component {
-    render() {
+// class BurgerStack extends Component {
+//     render() {
 
-       
+    function BurgerStack (props) {
         return(
             <div >
-                {this.props.stack.map((top, key) => (
-                    <h4 key={key}>{top.name}</h4>
+                {props.stack.map((top, key) => (
+                    <h4 key={key} style={{backgroundColor:top.color}}>{top.name}</h4>
                 ))}
             </div>
         )
-    }
-}
+        
+        
+    }       
+    // }
+// }
 export default BurgerStack
